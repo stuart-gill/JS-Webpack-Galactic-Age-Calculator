@@ -44,9 +44,17 @@ export class Birthday {
     }
 
     static milisecondsToYears (age){
-        let convertedAge = Math.floor(age / 3.154e+10);
+        const convertedAge = Math.floor(age / 31556952000);
         return convertedAge;
     }
+
+    static yearsLeft (age, expectancy){
+        const expectancyMili = expectancy * 31556952000;
+        const yearsLeft = expectancyMili - age;
+        return yearsLeft;
+    }
+
+ 
 
 
 }
