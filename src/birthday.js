@@ -7,10 +7,30 @@ export class Birthday {
         this.day = day;
     }
 
-    getAge (){
-        let today = new Date();
-        return today;
+    static birthdayToDate (birthday){
+        const birthdate = new Date (birthday.year, birthday.month-1, birthday.day)
+        return birthdate;
     }
+
+    static getAge (birthday){
+        const today = new Date();
+        const birthdate = Birthday.birthdayToDate(birthday);
+        const age = today - birthdate;
+        return age;
+    }
+
+    static getMercuryAge (birthday){
+        let age = getAge(birthdate);
+        age = age/.24;
+
+    }
+
+    static milisecondsToYears (age){
+        let convertedAge = age / 3.154e+10;
+        return convertedAge;
+    }
+
+    
 }
 
 

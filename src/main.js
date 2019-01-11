@@ -10,12 +10,13 @@ $(document).ready(function() {
     // let charClass;
     $("#birthdayForm").submit(function(event) {
         event.preventDefault();
-        const userBirthdate = $('#birthdate').val();
-        const userBirthmonth = $('#birthmonth').val()-1;
-        const userBirthyear = $('#birthyear').val();
+        const userBirthdate = parseInt($('#birthdate').val());
+        const userBirthmonth = parseInt($('#birthmonth').val());
+        const userBirthyear = parseInt($('#birthyear').val());
         
         let userBirthday = new Birthday(userBirthyear, userBirthmonth, userBirthdate);
+        let age = Birthday.getAge(userBirthday);
         //let earthAge = userBirthday.getAge;
-        console.log(userBirthday);
+        console.log(age);
     });        
 });
