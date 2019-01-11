@@ -1,5 +1,23 @@
 import $ from 'jquery';
 
+export class Birthday {
+    constructor (year, month, day){
+        this.year = year;
+        this.month = month;
+        this.day = day;
+    }
+
+    getAge (){
+        let today = new Date();
+        return today;
+    }
+}
+
+
+
+
+
+
 export class Character {
     static combat(character, monster) {
         while(character.health > 0 && monster.health > 0) {
