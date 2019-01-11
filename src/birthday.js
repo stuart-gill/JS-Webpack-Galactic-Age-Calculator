@@ -20,17 +20,35 @@ export class Birthday {
     }
 
     static getMercuryAge (birthday){
-        let age = getAge(birthdate);
+        let age = Birthday.getAge(birthday);
         age = age/.24;
+        return age;
+    }
 
+    static getVenusAge (birthday){
+        let age = Birthday.getAge(birthday);
+        age = age/.62;
+        return age;
+    }
+
+    static getMarsAge (birthday){
+        let age = Birthday.getAge(birthday);
+        age = age/1.88;
+        return age;
+    }
+
+    static getJupiterAge (birthday){
+        let age = Birthday.getAge(birthday);
+        age = age/11.86;
+        return age;
     }
 
     static milisecondsToYears (age){
-        let convertedAge = age / 3.154e+10;
+        let convertedAge = Math.floor(age / 3.154e+10);
         return convertedAge;
     }
 
-    
+
 }
 
 

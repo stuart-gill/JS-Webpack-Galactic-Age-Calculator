@@ -16,7 +16,18 @@ $(document).ready(function() {
         
         let userBirthday = new Birthday(userBirthyear, userBirthmonth, userBirthdate);
         let age = Birthday.getAge(userBirthday);
+        let earthAge = Birthday.milisecondsToYears(age);
+        let mercuryAge = Birthday.milisecondsToYears(Birthday.getMercuryAge(userBirthday));
+        let venusAge = Birthday.milisecondsToYears(Birthday.getVenusAge(userBirthday));
+        let marsAge = Birthday.milisecondsToYears(Birthday.getMarsAge(userBirthday));
+        let jupiterAge = Birthday.milisecondsToYears(Birthday.getJupiterAge(userBirthday));
+
+        
         //let earthAge = userBirthday.getAge;
-        console.log(age);
+        console.log(earthAge);
+        console.log(mercuryAge);
+        console.log(venusAge);
+        console.log(marsAge);
+        console.log(jupiterAge);
     });        
 });
