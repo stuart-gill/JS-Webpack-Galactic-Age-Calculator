@@ -15,7 +15,9 @@ This application takes a user's birth date, month, year, and their life expectan
 - Install Node.js
 - Download or clone this repository
 - Navigate to the project folder in the command line
-- From the command line: Enter _npm install_  then _npm run start_ after install has completed. This will spin up a chrome browser. You can view your results if you click "inspect" and check the console. 
+- From the command line: Enter _npm install_  then _npm run start_ after install has completed. This will spin up a chrome browser. 
+- Enter your information in the form and click submit. 
+- You can view your results by right clicking, choosing "inspect", and checking the console. 
 - To run tests, enter _npm test_ in the command line. 
 
 ### Technologies Used
